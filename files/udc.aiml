@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>*</pattern>
+        <template>
+            Welcome to the university's career advisory chatbot! Would you like to begin identifying which job might be right for you?
+            
+            <!--Initial replies to begin chatbot questionairre-->
+            <button>
+                <text>Yes!</text>
+                <postback>Begin</postback>
+            </button>
+            <button>
+                <text>I am not ready yet...</text>
+                <postback>Wait</postback>
+            </button>
+        </template>
+    </category>
+  
+  
+    <!--Do nothing; wait for student to begin program again-->
+    <category>
+        <pattern>Wait</pattern>
+        <template>It is okay, I will wait</template>
+    </category>
+  
+  
+    <!--Begin assessing student's skills-->
+    <category>
+        <pattern>Begin</pattern>
+        <template>Let us do it! Which skill do you think is your strongest?
+        
+            <button>
+                <text>Building applications</text>
+                <postback>Applications</postback>
+            </button>
+            <button>
+                <text>Computer security</text>
+                <postback>Cybersecurity</postback>
+            </button>
+            <button>
+                <text>Designing user interfaces</text>
+                <postback>UX</postback>
+            </button>
+            <button>
+                <text>Building websites</text>
+                <postback>Websites</postback>
+            </button>
+            <button>
+                <text>Building and/or designing computer hardware</text>
+                <postback>Hardware</postback>
+            </button>
+        </template>
+    </category>
+    
+    
+    <!--Recommend job types for each skill with button to assess recommendation-->
+    <category>
+        <pattern>Applications</pattern>
+        <template>I believe the software engineer role would be right for you! Do you agree?
+        
+            <button>
+                <text>Yes!</text>
+                <postback>Yswe</postback>
+            </button>
+            <button>
+                <text>Not quite...</text>
+                <postback>Nswe</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>Cybersecurity</pattern>
+        <template>I believe the cybersecurity engineer role would be right for you! Do you agree?
+            
+            <button>
+                <text>Yes!</text>
+                <postback>Ycs</postback>
+            </button>
+            <button>
+                <text>Not quite...</text>
+                <postback>Ncs</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>UX</pattern>
+        <template>I believe the UI/UX engineer role would be right for you! Do you agree?
+            
+            <button>
+                <text>Yes!</text>
+                <postback>Yux</postback>
+            </button>
+            <button>
+                <text>Not quite...</text>
+                <postback>Nux</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>Websites</pattern>
+        <template>I believe the web developer role would be right for you! Do you agree?
+            
+            <button>
+                <text>Yes!</text>
+                <postback>Ywd</postback>
+            </button>
+            <button>
+                <text>Not quite...</text>
+                <postback>Nwd</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>Hardware</pattern>
+        <template>I believe the computer hardware engineer role would be right for you! Do you agree?
+            
+            <button>
+                <text>Yes!</text>
+                <postback>Yhwe</postback>
+            </button>
+            <button>
+                <text>Not quite...</text>
+                <postback>Nhwe</postback>
+            </button>
+        </template>
+    </category>
+    
+    
+    <!--Assess job recommendation response-->
+    <!--Yes/No software engineer-->
+    <category>
+        <pattern>Yswe</pattern>
+        <template>I hope you develop fun and cool applications! If you change your mind, enter any character(s) to continue your search!</template>
+    </category>
+    <category>
+        <pattern>Nswe</pattern>
+        <template>Let us find what works best for you! Enter any character(s) to continue your search!</template>
+    </category>
+    
+    <!--Yes/No cybersecurity engineer-->
+    <category>
+        <pattern>Ycs</pattern>
+        <template>I hope you make computers and internets safer for everyone! If you change your mind, enter any character(s) to continue your search!</template>
+    </category>
+    <category>
+        <pattern>Ncs</pattern>
+        <template>Let us find what works best for you! Enter any character(s) to continue your search!</template>
+    </category>
+    
+    <!--Yes/No UX engineer-->
+    <category>
+        <pattern>Yux</pattern>
+        <template>I hope you make interfaces helpful for everyone! If you change your mind, enter any character(s) to continue your search!</template>
+    </category>
+    <category>
+        <pattern>Nux</pattern>
+        <template>Let us find what works best for you! Enter any character(s) to continue your search!</template>
+    </category>
+    
+    <!--Yes/No web development engineer-->
+    <category>
+        <pattern>Ywd</pattern>
+        <template>I hope you make accessible and interactive websites for everyone! If you change your mind, enter any character(s) to continue your search!</template>
+    </category>
+    <category>
+        <pattern>Nwd</pattern>
+        <template>Let us find what works best for you! Enter any character(s) to continue your search!</template>
+    </category>
+    
+    <!--Yes/No computer hardware engineer-->
+    <category>
+        <pattern>Yhwe</pattern>
+        <template>I hope you design fast and efficient hardware! If you change your mind, enter any character(s) to continue your search!</template>
+    </category>
+    <category>
+        <pattern>Nhwe</pattern>
+        <template>Let us find what works best for you! Enter any character(s) to continue your search!</template>
+    </category>
+</aiml>
